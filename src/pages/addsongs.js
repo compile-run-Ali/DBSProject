@@ -2,14 +2,14 @@ import React from "react";
 import logo from "../assets/download.png";
 import { Outlet, Link } from "react-router-dom";
 
-class register extends React.Component {
+class song extends React.Component {
   render() {
     return (
-      <div className="reg">
+      <div className="songget">
         <img src={logo}></img>
         <form method="POST">
           <div class="form-group">
-            <label for="email">Email address</label>
+            <label for="song">Email address</label>
             <input
               type="email"
               class="form-control"
@@ -80,4 +80,4 @@ class register extends React.Component {
   }
 }
 
-export default register;
+export default song;

@@ -1,11 +1,14 @@
 import React from "react";
-import "../homepage.css";
 import Homepage from "./homepage";
 
 export default function embed() {
   return (
-    <div className="App">
-      <Homepage embedId="rokGy0huYEA" />
+    <div style={{
+      backgroundColor:'coral',
+      width: '1550px',
+      height: '1000px'
+    }}>
+      <Homepage embedId="co4YpHTqmfQ" />
     </div>
   );
 }

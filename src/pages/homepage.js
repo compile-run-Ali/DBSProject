@@ -5,10 +5,11 @@ import Searchbar from "./search";
 
 const homepage = ({ embedId }) => (
   <div>
-
+    <div className="Header">
     <header>
       <Searchbar/>
     </header>
+    </div>
     <div className="video-responsive">
       <iframe
         width="853"

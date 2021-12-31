@@ -4,7 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 class login extends React.Component {
   render() {
     return (
-      <div>
+      <div className="login">
         <img src={logo}></img>
         <form method="POST">
           <div class="form-group">

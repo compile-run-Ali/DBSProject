@@ -16,30 +16,64 @@ class register extends React.Component {
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Enter email"
+              name="email"
             />
             <small id="emailHelp" class="form-text text-muted">
               We'll never share your email with anyone else.
             </small>
             <div>
-            <label for="username">Username</label>
-            <input
-              type="text"
-              class="form-control"
-              id="exampleInputUsername1"
-              placeholder="Enter Username"
-            />
+              <label for="username">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputUsername1"
+                placeholder="Enter Username"
+                name="username"
+              />
             </div>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+                placeholder="Password"
+                name="password"
+              />
+            </div>
+            <div class="form-group">
+              <label for="Age">Age</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Your age"
+                name="user_age"
+              />
+            </div>
+            <div class="form-group">
+              <label for="user_country">Country</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Your country"
+                name="user_country"
+              />
+            </div>
+            <div class="form-group">
+              <label for="creditcard_info">Creditcard Information</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="creditcard information"
+                name="creditcard_info"
+              />
+            </div>
             <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-              placeholder="Password"
-            />
+              type="submit"
+              value="Register"
+              class="btn btn-primary"
+            ></input>
           </div>
-          <input type="submit" value="Register"class="btn btn-primary"></input>
         </form>
       </div>
     );

@@ -9,6 +9,8 @@ body {
   display: grid;
   justify-items: center;
   align-items: center;
-  background-color: #1883a0;
+  background-color: #131111;
 }
-
+.background-blue {
+  background-color: rgb(14, 14, 15);
+}

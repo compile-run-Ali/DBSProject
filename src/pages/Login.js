@@ -2,6 +2,20 @@ import React from "react";
 import logo from "../assets/download.png";
 import { Outlet, Link } from "react-router-dom";
 class login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { apiResponse: "" };
+}
+
+callAPI() {
+    fetch("http://localhost:9000/testAPI")
+        .then(res => res.text())
+        .then(res => this.setState({ apiResponse: res }));
+}
+
+componentWillMount() {
+    this.callAPI();
+}
   render() {
     return (
       <div className="login">
@@ -35,9 +49,11 @@ class login extends React.Component {
         <Link to="/register">
             <button type="button"class="btn btn-info">Or register</button>
           </Link>
+          <p className="App-intro">;{this.state.apiResponse}</p>
       </div>
     );
   }
 }
+
 
 export default login;

@@ -2,7 +2,7 @@
 import Embed from  "./pages/embed"; 
 import Login from "./pages/Login";
 import Register from "./pages/register";
-import Song from "./pages/register";
+import Song from "./pages/addsongs"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {

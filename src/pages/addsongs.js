@@ -5,73 +5,40 @@ import { Outlet, Link } from "react-router-dom";
 class song extends React.Component {
   render() {
     return (
-      <div className="songget">
+      <div class="songget">
         <img src={logo}></img>
         <form method="POST">
           <div class="form-group">
-            <label for="song">Email address</label>
+            <label for="name">Song name</label>
             <input
-              type="email"
+              type="text"
               class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Enter email"
-              name="email"
+              placeholder="Name"
+              name="name"
             />
-            <small id="emailHelp" class="form-text text-muted">
-              We'll never share your email with anyone else.
-            </small>
             <div>
-              <label for="username">Username</label>
+              <label for="url">url of the song</label>
               <input
                 type="text"
                 class="form-control"
-                id="exampleInputUsername1"
-                placeholder="Enter Username"
-                name="username"
+                placeholder="insert url"
+                name="url"
               />
             </div>
             <div class="form-group">
-              <label for="password">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                id="exampleInputPassword1"
-                placeholder="Password"
-                name="password"
-              />
-            </div>
-            <div class="form-group">
-              <label for="Age">Age</label>
+              <label for="track_length">track length(between 0 and 700 seconds)</label>
               <input
                 type="number"
                 class="form-control"
-                placeholder="Your age"
-                name="user_age"
-              />
-            </div>
-            <div class="form-group">
-              <label for="user_country">Country</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Your country"
-                name="user_country"
-              />
-            </div>
-            <div class="form-group">
-              <label for="creditcard_info">Creditcard Information</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="creditcard information"
-                name="creditcard_info"
+                name="track_length"
+                min="0"
+                max="700"
               />
             </div>
             <input
               type="submit"
-              value="Register"
-              class="btn btn-primary"
+              value="Add song"
+              class="btn btn-danger"
             ></input>
           </div>
         </form>

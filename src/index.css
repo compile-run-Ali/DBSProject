@@ -2,8 +2,8 @@
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
-  left: 350px;
-  top: 100px;
+  /* left: 0px; */
+  top: 150px;
   height: 300px;
   width: 1000px;
 }
@@ -206,5 +206,19 @@
 .column {
   float: left;
   width: 33.3%;
+  padding: 0 8px;
+}
+.suggested{
+  font-family:'Courier New', Courier, monospace;
+  text-align: left;
+  /* margin-top: 0px; */
+  margin-left: -10px;
+  color: aliceblue;
+  box-shadow: 0 6px 10px 0 #0c0c0c33;
+  background-color: #383830;
+}
+.acolumn {
+  float: left;
+  width: 26.3%;
   padding: 0 8px;
 }

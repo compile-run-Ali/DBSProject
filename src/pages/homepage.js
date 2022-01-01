@@ -2,15 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import Searchbar from "./search";
 
-
 const homepage = ({ embedId }) => (
   <div>
     <div className="Header">
-    <header>
-      <Searchbar/>
-    </header>
+      <header>
+        <Searchbar />
+      </header>
     </div>
-    
+
+    <div className="acolumn">
+      <div className="suggested">
+        <h2>Suggested for you today: </h2>
+      </div>
+    </div>
     <div className="video-responsive">
       <iframe
         width="853"
@@ -26,7 +30,7 @@ const homepage = ({ embedId }) => (
 );
 
 homepage.propTypes = {
-  embedId: PropTypes.string.isRequired
+  embedId: PropTypes.string.isRequired,
 };
 
 export default homepage;

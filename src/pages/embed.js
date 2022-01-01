@@ -8,7 +8,7 @@ export default function embed() {
       width: '1550px',
       height: '1000px'
     }}>
-      <Homepage embedId="co4YpHTqmfQ" />
+      <Homepage embedId="bpOSxM0rNPM" />
     </div>
   );
 }

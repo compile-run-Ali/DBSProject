@@ -10,7 +10,7 @@ class searchbar extends React.Component {
   submit = async (e) => {
     e.preventDefault();
 
-    const res = await axios.get("http://localost:8080/123", this.state);
+    const res = await axios.post("http://localost:8080/123", this.state);
     console.log(res.data);
   };
 
@@ -43,7 +43,7 @@ class searchbar extends React.Component {
         </div>
         <div className="login-container">
           <nav>
-            <form method="GET" onSubmit={this.submit}>
+            <form method="POST" onSubmit={this.submit}>
               <input
                 type="text"
                 placeholder="Song"
@@ -56,7 +56,7 @@ class searchbar extends React.Component {
         </div>
         <div className="login-container">
           <nav>
-            <form method="GET" onSubmit={this.submit}>
+            <form method="POST" onSubmit={this.submit}>
               <input
                 type="text"
                 placeholder="Artist"

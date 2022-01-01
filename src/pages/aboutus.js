@@ -44,8 +44,8 @@ class aboutus extends React.Component {
       <div className="card">
           <div className="acontainer">
               <h2>Haider Muhammad Wazir</h2>
-              <p className="title">CMS:cms</p>
-              <p><button class="button">email</button></p>
+              <p className="title">CMS:333657</p>
+              <p><button class="button">hwazir.bscs20seecs@seecs.edu.pk</button></p>
           </div>
       </div>
       </div>

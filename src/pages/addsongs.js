@@ -25,7 +25,7 @@ class song extends React.Component {
         </div>
         <div class="songget">
           <img src={logo}></img>
-          <form method="POST">
+          <form method="POST" action="http://localhost:8080/song/add">
             <div class="form-group">
               <label for="name">Song name</label>
               <input

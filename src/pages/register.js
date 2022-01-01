@@ -24,7 +24,7 @@ class register extends React.Component {
         </div>
         <div className="reg">
           <img src={logo}></img>
-          <form method="POST">
+          <form method="POST" action="http://localhost:8080/user/search">
             <div class="form-group">
               <label for="email">Email address</label>
               <input

@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/download.png";
 import { Outlet, Link } from "react-router-dom";
 
-class song extends React.Component {
+class artist extends React.Component {
   render() {
     return (
       <div>
@@ -15,10 +15,10 @@ class song extends React.Component {
                 <a>Home</a>
               </Link>
               <Link to="/addartist">
-                <a>Add Artist</a>
+                <a className="active">Add Artist</a>
               </Link>
               <Link to="/addsongs">
-                <a className="active">addsongs</a>
+                <a>addsongs</a>
               </Link>
             </div>
           </header>
@@ -27,47 +27,26 @@ class song extends React.Component {
           <img src={logo}></img>
           <form method="POST">
             <div class="form-group">
-              <label for="name">Song name</label>
+              <label for="aname">Artist name</label>
               <input
                 type="text"
                 class="form-control"
                 placeholder="Name"
-                name="name"
+                name="aname"
               />
               <div>
-                <label for="aname">Artist name</label>
+                <label for="country">Country of the artist</label>
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="e.g Post Malone"
-                  name="aname"
-                />
-              </div>
-              <div>
-                <label for="url">embed id of the song</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="insert url"
-                  name="url"
-                />
-              </div>
-              <div class="form-group">
-                <label for="track_length">
-                  track length(between 0 and 700 seconds)
-                </label>
-                <input
-                  type="number"
-                  class="form-control"
-                  name="track_length"
-                  min="0"
-                  max="700"
+                  placeholder="Country"
+                  name="country"
                 />
               </div>
               <input
                 type="submit"
-                value="Add song"
-                class="btn btn-danger"
+                value="Add Artist"
+                class="btn btn-warning"
               ></input>
             </div>
           </form>
@@ -77,4 +56,4 @@ class song extends React.Component {
   }
 }
 
-export default song;
+export default artist;

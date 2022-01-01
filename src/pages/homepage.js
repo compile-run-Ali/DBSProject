@@ -10,6 +10,7 @@ const homepage = ({ embedId }) => (
       <Searchbar/>
     </header>
     </div>
+    
     <div className="video-responsive">
       <iframe
         width="853"

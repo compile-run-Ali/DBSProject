@@ -1,8 +1,37 @@
 import React from "react";
 import logo from "../assets/download.png";
+import axios from "axios"
 import { Outlet, Link } from "react-router-dom";
 
 class register extends React.Component {
+  state = {
+    email: "",
+    password: "",
+    username:"",
+    user_age:"",
+    user_country:"",
+    creditcard_info:"",
+  }
+  submit = async (e) => {
+    e.preventDefault();
+
+    const res = await axios.get("http://localost:8080/user/search", this.state);
+    console.log(res.data);
+  };
+
+  change(e) {
+    console.log(e);
+    this.setStateS({
+      email: e.target.value,
+      password: e.target.value,
+      username:e.target.value,
+      user_age:e.target.value,
+      user_country:e.target.value,
+      creditcard_info:e.target.value,
+
+    });
+  }
+
   render() {
     return (
       <div>
@@ -24,16 +53,17 @@ class register extends React.Component {
         </div>
         <div className="reg">
           <img src={logo}></img>
-          <form method="POST" action="http://localhost:8080/user/search">
+          <form method="POST" onSubmit={this.submit}>
             <div class="form-group">
               <label for="email">Email address</label>
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                name="email"
                 aria-describedby="emailHelp"
                 placeholder="Enter email"
                 name="email"
+                onChange={this.change}
               />
               <small id="emailHelp" class="form-text text-muted">
                 We'll never share your email with anyone else.
@@ -43,9 +73,10 @@ class register extends React.Component {
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputUsername1"
+                  name="username"
                   placeholder="Enter Username"
                   name="username"
+                  onChange={this.change}
                 />
               </div>
               <div class="form-group">
@@ -53,9 +84,10 @@ class register extends React.Component {
                 <input
                   type="password"
                   class="form-control"
-                  id="exampleInputPassword1"
+                  name="password"
                   placeholder="Password"
                   name="password"
+                  onChange={this.change}
                 />
               </div>
               <div class="form-group">
@@ -65,6 +97,7 @@ class register extends React.Component {
                   class="form-control"
                   placeholder="Your age"
                   name="user_age"
+                  onChange={this.change}
                 />
               </div>
               <div class="form-group">
@@ -74,6 +107,7 @@ class register extends React.Component {
                   class="form-control"
                   placeholder="Your country"
                   name="user_country"
+                  onChange={this.change}
                 />
               </div>
               <div class="form-group">
@@ -83,6 +117,7 @@ class register extends React.Component {
                   class="form-control"
                   placeholder="creditcard information"
                   name="creditcard_info"
+                  onChange={this.change}
                 />
               </div>
               <input

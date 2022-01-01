@@ -1,8 +1,27 @@
 import React from "react";
 import logo from "../assets/download.png";
+import axios from "axios";
 import { Outlet, Link } from "react-router-dom";
 
 class artist extends React.Component {
+  state = {
+    aname: "",
+    country:""
+  }
+  submit = async (e) => {
+    e.preventDefault();
+
+    const res = await axios.post("http://localost:8080/artist/details", this.state);
+    console.log(res.data);
+  };
+
+  change(e) {
+    console.log(e);
+    this.setStateS({
+      name: e.target.value,
+      country:e.target.value,
+    });
+  }
   render() {
     return (
       <div>
@@ -25,7 +44,7 @@ class artist extends React.Component {
         </div>
         <div class="songget">
           <img src={logo}></img>
-          <form method="POST" action="http://localhost:8080/artist/details" >
+          <form method="POST" onSubmit={this.submit} >
             <div class="form-group">
               <label for="aname">Artist name</label>
               <input
@@ -33,6 +52,7 @@ class artist extends React.Component {
                 class="form-control"
                 placeholder="Name"
                 name="aname"
+                onChange={this.change}
               />
               <div>
                 <label for="country">Country of the artist</label>
@@ -41,6 +61,7 @@ class artist extends React.Component {
                   class="form-control"
                   placeholder="Country"
                   name="country"
+                  onChange={this.change}
                 />
               </div>
               <input

@@ -1,8 +1,32 @@
 import React from "react";
 import logo from "../assets/download.png";
+import axios from "axios";
 import { Outlet, Link } from "react-router-dom";
 
 class song extends React.Component {
+  state = {
+    sname: "",
+    aname:"",
+    url:"",
+    track_length:"",
+  }
+  submit = async (e) => {
+    e.preventDefault();
+
+    const res = await axios.post("http://localost:8080/songs/add", this.state);
+    console.log(res.data);
+  };
+
+  change(e) {
+    console.log(e);
+    this.setStateS({
+      sname: e.target.value,
+      aname: e.target.value,
+      url: e.target.value,
+      track_length:e.target.value,
+    });
+  }
+
   render() {
     return (
       <div>
@@ -25,14 +49,15 @@ class song extends React.Component {
         </div>
         <div class="songget">
           <img src={logo}></img>
-          <form method="POST" action="http://localhost:8080/song/add">
+          <form method="POST" onSubmit={this.submit}>
             <div class="form-group">
-              <label for="name">Song name</label>
+              <label for="sname">Song name</label>
               <input
                 type="text"
                 class="form-control"
                 placeholder="Name"
-                name="name"
+                name="sname"
+                onChange={this.change}
               />
               <div>
                 <label for="aname">Artist name</label>
@@ -41,6 +66,7 @@ class song extends React.Component {
                   class="form-control"
                   placeholder="e.g Post Malone"
                   name="aname"
+                  onChange={this.change}
                 />
               </div>
               <div>
@@ -50,6 +76,7 @@ class song extends React.Component {
                   class="form-control"
                   placeholder="insert url"
                   name="url"
+                  onChange={this.change}
                 />
               </div>
               <div class="form-group">
@@ -62,6 +89,7 @@ class song extends React.Component {
                   name="track_length"
                   min="0"
                   max="700"
+                  onChange={this.change}
                 />
               </div>
               <input

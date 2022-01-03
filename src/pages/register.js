@@ -4,33 +4,6 @@ import axios from "axios"
 import { Outlet, Link } from "react-router-dom";
 
 class register extends React.Component {
-  state = {
-    email: "",
-    password: "",
-    username:"",
-    user_age:"",
-    user_country:"",
-    creditcard_info:"",
-  }
-  submit = async (e) => {
-    e.preventDefault();
-
-    const res = await axios.get("http://localost:8080/user/search", this.state);
-    console.log(res.data);
-  };
-
-  change(e) {
-    console.log(e);
-    this.setStateS({
-      email: e.target.value,
-      password: e.target.value,
-      username:e.target.value,
-      user_age:e.target.value,
-      user_country:e.target.value,
-      creditcard_info:e.target.value,
-
-    });
-  }
 
   render() {
     return (
@@ -53,7 +26,7 @@ class register extends React.Component {
         </div>
         <div className="reg">
           <img src={logo}></img>
-          <form method="POST" onSubmit={this.submit}>
+          <form method="POST" action="http://localhost:8080/user/reg">
             <div class="form-group">
               <label for="email">Email address</label>
               <input
@@ -91,7 +64,7 @@ class register extends React.Component {
                 />
               </div>
               <div class="form-group">
-                <label for="Age">Age</label>
+                <label for="user_age">Age</label>
                 <input
                   type="number"
                   class="form-control"

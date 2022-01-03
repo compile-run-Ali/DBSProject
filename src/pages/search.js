@@ -3,38 +3,6 @@ import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
 class searchbar extends React.Component {
-  stateS = {
-    sname: "",
-  };
-  stateA={
-    aname:"",
-  }
-
-  submit = async (e) => {
-    e.preventDefault();
-
-    const res = await axios.get("http://localost:8080/song/details", this.state);
-    console.log(res.data);
-  };
-  asubmit = async(e)=>{
-    e.preventDefault();
-
-    const res = await axios.get("http://localost:8080/artist/details", this.state);
-    console.log(res.data);
-  }
-
-  change(e) {
-    console.log(e);
-    this.setStateS({
-      name: e.target.value,
-    });
-  }
-  achange(e) {
-    console.log(e);
-    this.setStateA({
-      name: e.target.value,
-    });
-  }
 
 
   render() {
@@ -59,25 +27,27 @@ class searchbar extends React.Component {
         </div>
         <div className="login-container">
           <nav>
-            <form method="GET" onSubmit={this.submit}>
+            <form method="GET" action="http://localhost:8080/song/details">
+            <div class="form-group">
+              <label for="sname">Song name</label>
               <input
                 type="text"
-                placeholder="Song"
+                class="form-control"
+                placeholder="Name"
                 name="sname"
-                onChange={this.change}
               />
+              </div>
               <button type="submit">Search by song</button>
             </form>
           </nav>
         </div>
         <div className="login-container">
           <nav>
-            <form method="GET" onSubmit={this.asubmit}>
+            <form method="GET" action="http://localhost:8080/artist/details">
               <input
                 type="text"
                 placeholder="Artist"
                 name="aname"
-                onChange={this.achange}
               />
               <button type="submit">Search by artist name</button>
             </form>

@@ -36,7 +36,6 @@ class register extends React.Component {
                 aria-describedby="emailHelp"
                 placeholder="Enter email"
                 name="email"
-                onChange={this.change}
               />
               <small id="emailHelp" class="form-text text-muted">
                 We'll never share your email with anyone else.
@@ -49,7 +48,6 @@ class register extends React.Component {
                   name="username"
                   placeholder="Enter Username"
                   name="username"
-                  onChange={this.change}
                 />
               </div>
               <div class="form-group">
@@ -60,7 +58,6 @@ class register extends React.Component {
                   name="password"
                   placeholder="Password"
                   name="password"
-                  onChange={this.change}
                 />
               </div>
               <div class="form-group">
@@ -70,7 +67,6 @@ class register extends React.Component {
                   class="form-control"
                   placeholder="Your age"
                   name="user_age"
-                  onChange={this.change}
                 />
               </div>
               <div class="form-group">
@@ -80,7 +76,6 @@ class register extends React.Component {
                   class="form-control"
                   placeholder="Your country"
                   name="user_country"
-                  onChange={this.change}
                 />
               </div>
               <div class="form-group">
@@ -90,7 +85,6 @@ class register extends React.Component {
                   class="form-control"
                   placeholder="creditcard information"
                   name="creditcard_info"
-                  onChange={this.change}
                 />
               </div>
               <input

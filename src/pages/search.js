@@ -27,16 +27,12 @@ class searchbar extends React.Component {
         </div>
         <div className="login-container">
           <nav>
-            <form method="GET" action="http://localhost:8080/song/details">
-            <div class="form-group">
-              <label for="sname">Song name</label>
+            <form method="POST" action="http://localhost:8080/song/details">
               <input
                 type="text"
-                class="form-control"
-                placeholder="Name"
+                placeholder="Song"
                 name="sname"
               />
-              </div>
               <button type="submit">Search by song</button>
             </form>
           </nav>

@@ -27,7 +27,7 @@ class artist extends React.Component {
         </div>
         <div class="songget">
           <img src={logo}></img>
-          <form method="POST" action="http://localhost:8080/artist/details" >
+          <form method="POST" action="http://localhost:8080/artist/addArtist" >
             <div class="form-group">
               <label for="aname">Artist name</label>
               <input

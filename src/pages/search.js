@@ -39,7 +39,7 @@ class searchbar extends React.Component {
         </div>
         <div className="login-container">
           <nav>
-            <form method="GET" action="http://localhost:8080/artist/details">
+            <form method="POST" action="http://localhost:8080/artist/details">
               <input
                 type="text"
                 placeholder="Artist"

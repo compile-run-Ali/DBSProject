@@ -1,16 +1,8 @@
-import React from "react";
+import react from "react";
 import PropTypes from "prop-types";
-import Searchbar from "./search";
 
-
-const homepage = ({ embedId }) => (
+const songplay = ({ embedId }) => (
   <div>
-    <div className="Header">
-      <header>
-        <Searchbar />
-      </header>
-    </div>
-
     <div className="acolumn">
       <div className="suggested">
         <h2>Suggested for you today: </h2>
@@ -30,8 +22,7 @@ const homepage = ({ embedId }) => (
   </div>
 );
 
-homepage.propTypes = {
-  embedId: PropTypes.string.isRequired,
+songplay.propTypes={
+    embedId: PropTypes.string.isRequired,
 };
-
-export default homepage;
+export default songplay;

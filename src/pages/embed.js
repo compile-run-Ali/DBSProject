@@ -1,6 +1,5 @@
 import React from "react";
 import Homepage from "./homepage";
-import {id} from "./search"
 
 export default function embed() {
   return (
@@ -9,7 +8,7 @@ export default function embed() {
       width: '1550px',
       height: '1000px'
     }}>
-      <Homepage embedId = {id} />
+      <Homepage />
     </div>
   );
 }

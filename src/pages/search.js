@@ -1,13 +1,19 @@
 import axios from "axios";
-import React from "react";
+import React,{useState} from "react";
 import { Outlet, Link } from "react-router-dom";
 
-export const id="wcGTqKj_1-4";
+
 class searchbar extends React.Component {
-  state={
+  constructor(props){
+    super(props);
+  this.state={
     sname:'',
-    URL:"",
+    URL:'',
   };
+}
+  handleChange=event=>{
+    this.setState({sname:event.target.value});
+  }
   handleSubmit=event=>{
     event.preventDefault();
 
@@ -16,14 +22,14 @@ class searchbar extends React.Component {
       .then(res => {
         console.log(res);
         console.log(res.data[0].URL);
-        return res.data[0].URL;
+        this.setState({URL:res.data[0].URL});
       })
   }
-  handleChange=event=>{
-    this.setState({sname:event.target.value});
-  }
+ 
   render() {
+
     return (
+      <div>
       <div className="topnav">
         <a className="active" href="#home">
           Home
@@ -67,10 +73,25 @@ class searchbar extends React.Component {
             </form>
           </nav>
           <div>
-            
           </div>
         </div>
-        
+      </div>
+      <div className="acolumn">
+      <div className="suggested">
+        <h2>Suggested for you today: </h2>
+      </div>
+    </div>
+    <div className="video-responsive">
+      <iframe
+        width="853"
+        height="480"
+        src={`https://www.youtube.com/embed/${this.state.URL}`}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="Embedded youtube"
+      />
+    </div>
       </div>
     );
   }

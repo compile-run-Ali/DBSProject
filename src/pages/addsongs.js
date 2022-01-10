@@ -68,7 +68,7 @@ class song extends React.Component {
               <input
                 type="submit"
                 value="Add song"
-                class="btn btn-danger"
+                class="btn btn-primary"
               ></input>
             </div>
           </form>

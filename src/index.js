@@ -5,4 +5,4 @@ import App from './App';
 import "bootstrap/dist/css/bootstrap.css"
 
 ReactDOM.render(<App/>,document.getElementById("root"));
-document.body.style = 'background: #ffcc99;';
+document.body.style = 'background: #323e58';

@@ -48,7 +48,7 @@ class artist extends React.Component {
               <input
                 type="submit"
                 value="Add Artist"
-                class="btn btn-warning"
+                class="btn btn-primary"
               ></input>
             </div>
           </form>

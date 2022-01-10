@@ -4,7 +4,7 @@ import Homepage from "./homepage";
 export default function embed() {
   return (
     <div style={{
-      backgroundColor:'#ffcc99',
+      backgroundColor:'#273044',
       width: 'vw',
       height: 'vh'
     }}>

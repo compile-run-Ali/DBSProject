@@ -95,7 +95,7 @@
     padding: 14px;
   }
   .topnav input[type="text"] {
-    border: 1px solid rgb(10, 12, 9);
+    border: 1px solid rgb(8, 8, 8);
   }
 }
 .container {
@@ -107,6 +107,7 @@
   left: 50%;
   margin-top: -100px;
   margin-left: -100px;
+  color: aliceblue;
 }
 .login{
   position: fixed;
@@ -114,6 +115,7 @@
   left: 50%;
   margin-top: -100px;
   margin-left: -100px;
+  color: aliceblue;
 }
 .reg{
   position: fixed;
@@ -121,10 +123,11 @@
   left: 50%;
   margin-top: -100px;
   margin-left: -100px;
+  color: aliceblue;
 }
 .header {
   overflow: hidden;
-  background-color: #757171;
+  background-color: #122333;
   padding: 20px 10px;
 }
 
@@ -188,6 +191,7 @@
 .ourteam{
   text-align: center;
   margin-top: 10%;
+  color: #9291cc;
 }
 .card{
   box-shadow: 0 4px 8px 0 #0c0c0c33;
@@ -222,7 +226,7 @@
   margin-left: -10px;
   color: aliceblue;
   box-shadow: 0 6px 10px 0 #0c0c0c33;
-  background-color: #383830;
+  background-color: #132642;
 }
 .acolumn {
   float: left;

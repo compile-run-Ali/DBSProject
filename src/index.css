@@ -226,7 +226,7 @@
   padding: 0 8px;
 }
 .suggested{
-  font-family:'Courier New', Courier, monospace;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   text-align: left;
   /* margin-top: 0px; */
   margin-left: -10px;

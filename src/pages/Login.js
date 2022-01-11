@@ -30,7 +30,7 @@ class login extends React.Component {
         </div>
         <div className="login">
           <img src={logo}></img>
-          <form method="GET" action="http://localhost:8080/home">
+          <form method="POST" action="http://localhost:8080/user/ulogin">
             <div class="form-group">
               <label for="email">Email address</label>
               <input

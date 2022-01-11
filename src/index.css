@@ -192,24 +192,30 @@
   text-align: center;
   margin-top: 10%;
   color: #9291cc;
+  background-color: #1c2942;
 }
 .card{
-  box-shadow: 0 4px 8px 0 #0c0c0c33;
+  background-color: #122333;
+  box-shadow: 0 4px 8px 0 #00000033;
   margin: 8px;
+
 }
+
 .title {
-  color: rgb(8, 8, 8);
+  color: rgb(48, 85, 92);
+  
 }
 .button {
   border: none;
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: rgb(19, 18, 18);
-  background-color: rgb(99, 213, 106);
+  color: rgb(119, 239, 243);
+  background-color: rgb(52, 60, 87);
   text-align: center;
   cursor: pointer;
   width: 100%;
+  
 }
 .button:hover {
   background-color: rgb(145, 158, 199);

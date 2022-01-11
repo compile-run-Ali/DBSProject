@@ -4,6 +4,7 @@ import axios from "axios";
 import { Outlet, Link } from "react-router-dom";
 
 class song extends React.Component {
+  
   render() {
     return (
       <div>
@@ -65,6 +66,7 @@ class song extends React.Component {
                   max="700"
                 />
               </div>
+              
               <input
                 type="submit"
                 value="Add song"

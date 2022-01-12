@@ -7,10 +7,12 @@
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px 0 #0c0c0c33;
   background-color: #030303;
+  left:25%;
 }
 
 .video-responsive iframe {
   position: absolute;
+
   top: 0;
   bottom: 0;
   right: 0;
@@ -125,10 +127,38 @@
   margin-left: -100px;
   color: aliceblue;
 }
+.button{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: rgb(119, 239, 243);
+  background-color: rgb(59, 111, 128);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  border: 2px solid rgb(2, 16, 29);
+  box-shadow: 0 4px 8px 0 #00000033;
+  border-radius: 0.5rem;
+}
+button:hover {
+  background-color: rgb(54, 94, 168);
+}
+.formbutton{
+  background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color:aliceblue;
+}
+
 .header {
   overflow: hidden;
   background-color: #122333;
   padding: 20px 10px;
+  box-shadow: 0 4px 8px 0 #00000033;
 }
 
 /* Style the header links */
@@ -159,6 +189,7 @@
 .header a.active {
   background-color: rgb(46, 53, 59);
   color: white;
+  
 }
 
 /* Float the link section to the right */
@@ -193,6 +224,7 @@
   margin-top: 10%;
   color: #9291cc;
   background-color: #1c2942;
+  box-shadow: 0 4px 8px 0 #00000033;
 }
 .card{
   background-color: #122333;
@@ -205,7 +237,7 @@
   color: rgb(48, 85, 92);
   
 }
-.button {
+.card button {
   border: none;
   outline: 0;
   display: inline-block;
@@ -215,15 +247,18 @@
   text-align: center;
   cursor: pointer;
   width: 100%;
+  box-shadow: 0 4px 8px 0 #00000033;
   
 }
-.button:hover {
+.card button:hover {
   background-color: rgb(145, 158, 199);
 }
 .column {
   float: left;
   width: 33.3%;
   padding: 0 8px;
+  
+  
 }
 .suggested{
   font-family:Verdana, Geneva, Tahoma, sans-serif;

@@ -87,11 +87,13 @@ class register extends React.Component {
                   name="creditcard_info"
                 />
               </div>
+              <button className="button">
               <input
                 type="submit"
                 value="Register"
-                class="btn btn-primary"
+                class="formbutton"
               ></input>
+              </button>
             </div>
           </form>
         </div>

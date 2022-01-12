@@ -53,11 +53,13 @@ class login extends React.Component {
                 placeholder="Password"
               />
             </div>
-            <input type="submit" value="Login" class="btn btn-primary"></input>
+            <button className="button">
+            <input type="submit" value="Login" className="formbutton"></input>
+            </button>
           </form>
           <br></br>
           <Link to="/register">
-            <button type="button" class="btn btn-info">
+            <button className="button">
               Or register
             </button>
           </Link>

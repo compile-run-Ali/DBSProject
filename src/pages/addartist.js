@@ -45,11 +45,13 @@ class artist extends React.Component {
                   name="country"
                 />
               </div>
+              <button className="button">
               <input
                 type="submit"
                 value="Add Artist"
-                class="btn btn-primary"
+                class="formbutton"
               ></input>
+              </button>
             </div>
           </form>
         </div>

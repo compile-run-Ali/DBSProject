@@ -70,9 +70,9 @@ class searchbar extends React.Component {
           </div>
         </div>
         <div className="acolumn">
-          <div className="suggested">
+          {/* <div className="suggested">
             <h2>Suggested for you today: </h2>
-          </div>
+          </div> */}
         </div>
         <div className="video-responsive">
           <iframe

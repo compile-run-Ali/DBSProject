@@ -66,12 +66,12 @@ class song extends React.Component {
                   max="700"
                 />
               </div>
-              
+              <button className="button">
               <input
                 type="submit"
                 value="Add song"
-                class="btn btn-primary"
-              ></input>
+                class="formbutton"
+              ></input></button>
             </div>
           </form>
         </div>

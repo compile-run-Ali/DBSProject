@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/download.png";
 import { Outlet, Link } from "react-router-dom";
 
+
 class aboutus extends React.Component {
   render() {
     return (
